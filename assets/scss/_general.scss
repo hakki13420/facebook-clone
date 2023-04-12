@@ -1,0 +1,23 @@
+/*variables*/
+
+$primary-font:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$primary-background:#f0f0f0;
+$icon-color:#656565;
+$icon-background-color:#e4e4e4;
+$active-color:#1b75e5;
+
+$primary-padding: rem(10);
+$sidebar-width: rem(360);
+$feed-width: rem(680);
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $primary-font;
+    background-color: $primary-background;
+}
