@@ -1,0 +1,43 @@
+.create-post {
+    @include box-item();
+    padding: rem(15);
+
+    .input-box__text {
+        @include dflex();
+
+        label {
+            width: 100%;
+        }
+
+        input {
+            @include rounded-box(40, #efefef);
+            width: inherit;
+        }
+
+        img {
+            @include image-rounded(rem(40));
+        }
+    }
+
+    &__buttons {
+        @include dflex(row, space-around, center);
+        padding: rem(10);
+        margin-top: rem(10);
+        border-top: 1px solid #e4e4e4;
+
+    }
+    &__button {
+        @include dflex(row, space-between, center);
+        span{
+            color: #656565;
+            font-size: rem(18);
+        }
+
+        @for $i from 1 to 10 {
+            &:nth-child(#{$i}) i{
+                color: random-rgb();
+                font-size: 1.8rem;
+            }            
+        }
+    }
+}

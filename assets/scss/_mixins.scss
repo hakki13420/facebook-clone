@@ -1,9 +1,14 @@
+@function random-rgb(){
+    @return rgb(random(255), random(255), random(255));
+}
+
 @function rem($val){
     @if(type-of($val)==number){
         @return ($val / 16) + rem;
     }
     @return $val
 }
+
 
 @mixin dflex($dir:row,$jc:center,$ai:center,$gap:rem(10)){
     display: flex;
@@ -34,4 +39,12 @@
     height: $size;
     border-radius: 50%;
     background-color: $icon-background-color;
+}
+
+@mixin box-item{
+    background-color: white;
+    margin: rem(10) rem(10);
+    padding: $primary-padding;
+    border-radius: rem(10);
+    box-shadow: 0 2px 2px #00000020;
 }

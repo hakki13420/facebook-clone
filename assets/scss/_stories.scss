@@ -1,0 +1,29 @@
+.stories {
+    @include dflex(row, center, center);
+    padding: rem(10);
+
+    .story {
+        width: rem(100);
+        height: rem(180);
+        padding: rem(5);
+        @include dflex(column, space-between, center);
+        border-radius: rem(5);
+        color: white;
+        box-shadow: 0 2px 2px #00000b20;
+        background-color: #00000030;
+        background-blend-mode: multiply;
+
+        @for $i from 1 to 7 {
+            &.story-#{$i} {
+                background: url('https://picsum.photos/id/#{$i*random(20)}/100/180');
+            }
+        }
+
+        img {
+            @include image-rounded(rem(40));
+            border: 2px solid $active-color;
+            outline: 1px solid white;
+
+        }
+    }
+}

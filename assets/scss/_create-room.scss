@@ -1,0 +1,21 @@
+.create-room{
+    @include box-item();
+    @include dflex(row, space-between, center);
+
+    &__button{
+        @include dflex(row, space-between, center);
+        padding: rem(5) rem(10);
+        border-radius: rem(25);
+        border: 2px solid #efefef;
+        font-size: rem(18);
+        span{
+            font-size: .9rem;
+        }
+        i{
+            color:random-rgb();
+        }
+    }
+    &__images img{
+        @include image-rounded(rem(40));
+    }
+}

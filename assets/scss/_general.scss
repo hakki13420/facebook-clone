@@ -20,4 +20,18 @@ $feed-width: rem(680);
 body{
     font-family: $primary-font;
     background-color: $primary-background;
+    &::before{
+        content: "";
+        display: block;
+        height: rem(80);
+    }
+}
+
+.content{
+    &__left, &__right{
+        .wrapper{
+            position: sticky;
+            top: rem(80);
+        }
+    }
 }

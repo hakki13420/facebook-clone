@@ -1,0 +1,41 @@
+
+.facebook-shortcuts{
+    &__shortcut{
+        @extend %content-item;
+        i{
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: $active-color;
+        }
+    }
+}
+
+.separator{
+    padding: $primary-padding 0;
+    margin: $primary-padding;
+    border-top: 1px solid #ccc;
+}
+
+.facebook-favorites{
+    &__favorite{
+        @extend %content-item;        
+        .favorite-image{
+            @include circle-icon(rem(40));
+            @include dflex(row, center, center);
+            color:white;
+            font-size: 1rem;
+            font-weight: 800;
+            
+        }
+    }
+}
+
+.facebook-favorites__favorite:nth-child(1) .favorite-image {
+    background: red;
+}
+.facebook-favorites__favorite:nth-child(2) .favorite-image {
+    background: green;
+}
+.facebook-favorites__favorite:nth-child(3) .favorite-image {
+    background: blue;
+}

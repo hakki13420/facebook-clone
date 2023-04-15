@@ -1,0 +1,5 @@
+%content-item {
+    padding: rem(10);
+    @include dflex(row, left, center);
+    font-size: 1rem;
+}

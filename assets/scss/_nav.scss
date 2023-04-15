@@ -4,6 +4,11 @@
     background-color: white;
     box-shadow: 0 3px 10px #0000000d;
     padding: $primary-padding;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    
     &__left{
         flex:1;        
         @include dflex();
@@ -19,6 +24,7 @@
             }
             input{
                 @include rounded-box(40,#efefef);
+                width: inherit;
             }
         }
     }

@@ -1,0 +1,33 @@
+.fb-sponsors{
+    &__sponsor{
+        @extend %content-item;
+        .sponsor-image{
+            width: rem(100);
+            height: rem(120);
+            border-radius: rem(5);
+            object-fit: cover;
+        }
+    }
+}
+
+.fb-pages{    
+    &__page{
+        @include dflex(row, flex-start, center);
+        margin: rem(10) 0;
+        .page-image{
+            @include image-rounded(rem(40))
+            
+        }
+    }
+}
+
+.fb-contacts {
+    &__contact {
+        @include dflex(row, flex-start, center);
+        margin: rem(10) 0;
+
+        .contact-image {
+            @include image-rounded(rem(40))
+        }
+    }
+}

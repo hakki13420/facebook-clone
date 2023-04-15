@@ -1,0 +1,76 @@
+.news-feed{
+    @include box-item();
+    margin: rem(20) 0 0;
+    &__header{
+        @include dflex(row, space-between, center);
+        >div:nth-child(2){
+            flex: 1;        
+        }
+        &__post-user img{
+            @include image-rounded(rem(40));            
+        }
+        &__post-meta{
+            &__name{
+                font-weight: 600;
+            }
+            &__info{
+                @include dflex(row,flex-start, center, rem(5))
+            }
+        }
+        &__post-options{
+            font-size: 2rem;
+            font-weight: 600;
+            @include dflex(row, center, center);
+            text-align: center;            
+            position: relative;
+            span{
+                position: absolute;                
+                top: rem(-30);
+                left: rem(-20);
+            }
+        }
+    }
+    &__body{
+        p{
+            margin:rem(10) 0 0;
+            color: #656565;            
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        img{
+            margin: rem(10) 0 0;
+            width: 100%;
+            height: rem(340);
+            object-fit: cover;
+            border-radius: rem(10);
+        }
+    }
+    &__footer{
+        margin: rem(10) 0 0;
+        @include dflex(row, space-between, center);
+        &__icons{
+            font-size: 1.2rem;
+            color: $icon-color;
+        }
+    }
+    &__comment-box{
+        margin: rem(10) 0 0;
+        .input-box__text{
+            @include dflex(row, space-between,center);
+            img {
+                @include image-rounded(rem(30));
+            }
+        
+            label {
+                width: 100%;
+            }
+        
+            input {
+                @include rounded-box(30, #efefef);
+                width: inherit;
+                font-size: .9rem;
+            }
+        }        
+
+    }
+}

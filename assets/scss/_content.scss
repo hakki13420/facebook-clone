@@ -2,20 +2,17 @@
     @include dflex(row, space-between, top, rem(10));    
     padding: $primary-padding;
     &__left{
-        flex: 1;
-        background-color: beige;
+        flex: 1;       
         max-width: $sidebar-width;
     }
     
     &__middle{
-        flex: 2;
-        background-color: floralwhite;
+        flex: 2;        
         max-width: $feed-width;
     }
     
     &__right{
-        flex: 1;
-        background-color: beige;
+        flex: 1;     
         max-width: $sidebar-width;
     }
 }
